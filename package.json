@@ -2,56 +2,27 @@
   "name": "blockchain-certificate-registry",
   "version": "1.0.0",
   "description": "Tamper-proof blockchain certificate issuance & verification system",
-  "private": true,
-  "author": "r-mufti",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/r-mufti/blockchain_verify.git"
-  },
-  "keywords": [
-    "blockchain",
-    "certificate",
-    "verification",
-    "ethereum",
-    "smart-contracts"
-  ],
-  "homepage": "https://github.com/r-mufti/blockchain_verify#readme",
-  "bugs": {
-    "url": "https://github.com/r-mufti/blockchain_verify/issues"
-  },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=9.0.0"
-  },
   "scripts": {
-    "compile":        "hardhat compile",
-    "test":           "hardhat test",
-    "test:gas":       "REPORT_GAS=true hardhat test",
-    "coverage":       "hardhat coverage",
+    "compile":   "hardhat compile",
+    "test":      "hardhat test",
+    "test:gas":  "REPORT_GAS=true hardhat test",
+    "coverage":  "hardhat coverage",
     "deploy:local":   "hardhat run scripts/deploy.js --network localhost",
     "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
     "deploy:mumbai":  "hardhat run scripts/deploy.js --network mumbai",
     "deploy:mainnet": "hardhat run scripts/deploy.js --network mainnet",
     "deploy:polygon": "hardhat run scripts/deploy.js --network polygon",
-    "node":           "hardhat node",
-    "clean":          "hardhat clean",
-    "lint":           "solhint 'contracts/**/*.sol'",
-    "format":         "prettier --write 'contracts/**/*.sol'",
-    "verify":         "npm run compile && npm run test && npm run coverage",
-    "dev":            "hardhat node & sleep 2 && npm run deploy:local"
+    "node":      "hardhat node",
+    "clean":     "hardhat clean"
   },
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "4.0.0",
-    "@nomicfoundation/hardhat-network-helpers": "1.0.0",
-    "hardhat": "2.19.0",
-    "chai": "4.3.7",
-    "dotenv": "16.3.1",
-    "solhint": "4.0.0",
-    "prettier": "3.0.0",
-    "prettier-plugin-solidity": "1.2.0"
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "hardhat": "^2.19.0",
+    "chai": "^4.3.7",
+    "dotenv": "^16.3.1"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "5.0.0"
+    "@openzeppelin/contracts": "^5.0.0"
   }
 }
