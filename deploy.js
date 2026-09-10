@@ -17,7 +17,7 @@ async function main() {
   console.log(`  Balance  : ${ethers.formatEther(balance)} ETH`);
   console.log("───────────────────────────────────────────────────\n");
 
-  // ── Deploy ────────────────────────────────────────────────────────────────
+  // ── Deploy ───────────────────────────────────────────────────────────[...]
   console.log("⏳  Deploying CertificateRegistry...");
   const Factory = await ethers.getContractFactory("CertificateRegistry");
   const contract = await Factory.deploy();
@@ -78,10 +78,10 @@ async function main() {
       });
       console.log("✅  Contract verified on Etherscan");
     } catch (err) {
-      if (err.message.includes("Already Verified")) {
+      if (err.message && err.message.includes && err.message.includes("Already Verified")) {
         console.log("ℹ️   Already verified on Etherscan");
       } else {
-        console.error("⚠️   Verification failed:", err.message);
+        console.error("⚠️   Verification failed:", err && err.message ? err.message : err);
       }
     }
   }
