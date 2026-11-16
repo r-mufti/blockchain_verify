@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "fincept": {
+      "type": "http",
+      "url": "https://enterprise.fincept.in/mcp"
+    }
+  }
+}
